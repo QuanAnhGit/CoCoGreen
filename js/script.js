@@ -12,6 +12,7 @@ const PRODUCTS = [
     badge: "Mới",
     stock: 200,
     supplier: "HTX Bến Tre Xanh",
+    img: "assets/images/products/1.png",
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ const PRODUCTS = [
     badge: "-20%",
     stock: 483,
     supplier: "HTX Dừa Xanh Trà Vinh",
+    img: "assets/images/products/14.jpg",
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const PRODUCTS = [
     badge: "",
     stock: 8,
     supplier: "Cty Mekong Coco",
+    img: "assets/images/products/5.png",
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ const PRODUCTS = [
     badge: "-21%",
     stock: 45,
     supplier: "Làng nghề Sóc Trăng",
+    img: "assets/images/products/17.jpg",
   },
   {
     id: 5,
@@ -64,6 +68,7 @@ const PRODUCTS = [
     badge: "",
     stock: 156,
     supplier: "HTX Bến Tre Xanh",
+    img: "assets/images/products/23.jpg",
   },
   {
     id: 6,
@@ -77,6 +82,7 @@ const PRODUCTS = [
     badge: "Hot",
     stock: 320,
     supplier: "HTX Dừa Xanh Trà Vinh",
+    img: "assets/images/products/18.jpg",
   },
   {
     id: 7,
@@ -90,6 +96,7 @@ const PRODUCTS = [
     badge: "-17%",
     stock: 90,
     supplier: "Cty Mekong Coco",
+    img: "assets/images/products/17.jpg",
   },
   {
     id: 8,
@@ -103,6 +110,105 @@ const PRODUCTS = [
     badge: "Mới",
     stock: 60,
     supplier: "Làng nghề Sóc Trăng",
+    img: "assets/images/products/19.jpg",
+  },
+  {
+    id: 9,
+    name: "Chậu xơ dừa treo 25cm",
+    cat: "Chậu xơ dừa",
+    price: 72000,
+    old: 85000,
+    rating: 4.6,
+    rev: 64,
+    region: "Bến Tre",
+    badge: "-15%",
+    stock: 120,
+    supplier: "HTX Bến Tre Xanh",
+    img: "assets/images/products/9.jpg",
+  },
+  {
+    id: 10,
+    name: "Than gáo dừa viên nén 3kg",
+    cat: "Than gáo dừa",
+    price: 250000,
+    old: 0,
+    rating: 4.8,
+    rev: 178,
+    region: "Trà Vinh",
+    badge: "Hot",
+    stock: 300,
+    supplier: "HTX Dừa Xanh Trà Vinh",
+    img: "assets/images/products/10.jpg",
+  },
+  {
+    id: 11,
+    name: "Mụn dừa xử lý sạch 10kg",
+    cat: "Mụn dừa",
+    price: 180000,
+    old: 210000,
+    rating: 4.5,
+    rev: 92,
+    region: "Tiền Giang",
+    badge: "-14%",
+    stock: 85,
+    supplier: "Cty Mekong Coco",
+    img: "assets/images/products/11.jpg",
+  },
+  {
+    id: 12,
+    name: "Bình hoa xơ dừa decor",
+    cat: "Handmade",
+    price: 195000,
+    old: 0,
+    rating: 4.7,
+    rev: 53,
+    region: "Sóc Trăng",
+    badge: "Mới",
+    stock: 40,
+    supplier: "Làng nghề Sóc Trăng",
+    img: "assets/images/products/12.jpg",
+  },
+  {
+    id: 13,
+    name: "Chậu xơ dừa vuông 30cm",
+    cat: "Chậu xơ dừa",
+    price: 88000,
+    old: 0,
+    rating: 4.4,
+    rev: 37,
+    region: "Bến Tre",
+    badge: "",
+    stock: 150,
+    supplier: "HTX Bến Tre Xanh",
+    img: "assets/images/products/13.jpg",
+  },
+  {
+    id: 14,
+    name: "Than gáo dừa BBQ cao cấp 5kg",
+    cat: "Than gáo dừa",
+    price: 420000,
+    old: 480000,
+    rating: 4.9,
+    rev: 221,
+    region: "Trà Vinh",
+    badge: "-12%",
+    stock: 210,
+    supplier: "HTX Dừa Xanh Trà Vinh",
+    img: "assets/images/products/14.jpg",
+  },
+  {
+    id: 15,
+    name: "Combo trồng rau hữu cơ (Chậu + Mụn dừa)",
+    cat: "Combo",
+    price: 299000,
+    old: 350000,
+    rating: 4.8,
+    rev: 112,
+    region: "Bến Tre",
+    badge: "Combo -15%",
+    stock: 75,
+    supplier: "HTX Bến Tre Xanh",
+    img: "assets/images/products/15.jpg",
   },
 ];
 const NEWS = [
@@ -114,6 +220,7 @@ const NEWS = [
     tag: "So sánh",
     views: 1240,
     readTime: 5,
+    img: "assets/images/products/30.jpg",
   },
   {
     id: 2,
@@ -123,6 +230,7 @@ const NEWS = [
     tag: "Môi trường",
     views: 870,
     readTime: 4,
+    img: "assets/images/products/24.jpg",
   },
   {
     id: 3,
@@ -132,6 +240,7 @@ const NEWS = [
     tag: "Hướng dẫn",
     views: 2100,
     readTime: 7,
+    img: "assets/images/products/4.png",
   },
   {
     id: 4,
@@ -141,6 +250,7 @@ const NEWS = [
     tag: "Xu hướng",
     views: 3400,
     readTime: 6,
+    img: "assets/images/products/3.png",
   },
 ];
 const PARTNERS = [
@@ -302,7 +412,11 @@ function prodCard(p, small = false) {
   const imgH = small ? 170 : 200;
   return `<article class="prod-card" onclick="viewProduct(${p.id})">
     <div class="prod-card-img">
-      ${ph("100%", imgH, "400×400px")}
+      ${
+        p.img
+          ? `<img src="${p.img}" class="prod-real-img" style="width:100%;height:${imgH}px;object-fit:cover;">`
+          : ph("100%", imgH, "400×400px")
+      }
       ${p.badge ? `<span class="prod-badge">${p.badge}</span>` : ""}
       <button class="prod-fav" onclick="event.stopPropagation()">♡</button>
     </div>
@@ -330,8 +444,12 @@ function viewProduct(id) {
 // ── NEWS CARD ─────────────────────────────────────────────────
 function newsCard(n) {
   return `<article class="news-card" onclick="viewNews(${n.id})">
-    <div class="news-card-img">
-      ${ph("100%", 200, "600×300px")}
+        <div class="news-card-img">
+          ${
+            n.img
+              ? `<img src="${n.img}" style="width:100%;height:200px;object-fit:cover;">`
+              : ph("100%", 200, "600×300px")
+          }
       <span class="tag tag-green" style="position:absolute;top:12px;left:12px">${n.tag}</span>
     </div>
     <div class="news-body">
@@ -397,11 +515,63 @@ function render() {
 // ──────────────────────────────────────────────────────────────
 function renderHome() {
   const kpis = [
-    { icon: "🏭", val: "120+", lbl: "Doanh nghiệp" },
-    { icon: "📦", val: "350+", lbl: "Sản phẩm" },
-    { icon: "🛍️", val: "8,500", lbl: "Đơn hoàn thành" },
-    { icon: "⭐", val: "4.8/5", lbl: "Đánh giá TB" },
-    { icon: "⏰", val: "8–17h", lbl: "Giờ hoạt động" },
+    {
+      icon: `
+      <svg viewBox="0 0 100 100" class="kpi-svg">
+        <rect x="20" y="40" width="20" height="30" stroke="currentColor" stroke-width="4" fill="none"/>
+        <rect x="45" y="30" width="20" height="40" stroke="currentColor" stroke-width="4" fill="none"/>
+        <rect x="70" y="20" width="15" height="50" stroke="currentColor" stroke-width="4" fill="none"/>
+        <line x1="10" y1="70" x2="90" y2="70" stroke="currentColor" stroke-width="4"/>
+      </svg>
+    `,
+      val: "120+",
+      lbl: "Doanh nghiệp",
+    },
+    {
+      icon: `
+      <svg viewBox="0 0 100 100" class="kpi-svg">
+        <polygon points="20,40 50,20 80,40 50,60" stroke="currentColor" stroke-width="4" fill="none"/>
+        <line x1="20" y1="40" x2="20" y2="70" stroke="currentColor" stroke-width="4"/>
+        <line x1="80" y1="40" x2="80" y2="70" stroke="currentColor" stroke-width="4"/>
+        <line x1="20" y1="70" x2="80" y2="70" stroke="currentColor" stroke-width="4"/>
+      </svg>
+    `,
+      val: "350+",
+      lbl: "Sản phẩm",
+    },
+    {
+      icon: `
+      <svg viewBox="0 0 100 100" class="kpi-svg">
+        <rect x="20" y="30" width="60" height="40" stroke="currentColor" stroke-width="4" fill="none"/>
+        <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="4"/>
+      </svg>
+    `,
+      val: "8,500",
+      lbl: "Đơn hoàn thành",
+    },
+    {
+      icon: `
+      <svg viewBox="0 0 100 100" class="kpi-svg">
+        <polygon points="50,20 61,40 85,40 66,55 75,80 50,65 25,80 34,55 15,40 39,40"
+          stroke="currentColor"
+          stroke-width="4"
+          fill="none"/>
+      </svg>
+    `,
+      val: "4.8/5",
+      lbl: "Đánh giá TB",
+    },
+    {
+      icon: `
+      <svg viewBox="0 0 100 100" class="kpi-svg">
+        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="4" fill="none"/>
+        <line x1="50" y1="50" x2="50" y2="30" stroke="currentColor" stroke-width="4"/>
+        <line x1="50" y1="50" x2="65" y2="60" stroke="currentColor" stroke-width="4"/>
+      </svg>
+    `,
+      val: "8–17h",
+      lbl: "Giờ hoạt động",
+    },
   ];
   const benefits = [
     {
@@ -435,15 +605,15 @@ function renderHome() {
   return `
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg">${ph("100%", 580, "Hero Banner — 1920×580px")}</div>
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content anim-up">
       <span class="tag tag-green" style="margin-bottom:18px">🌴 Nền tảng xanh từ miền Tây</span>
-      <h1 class="hero-title">Sản phẩm xơ dừa miền Tây –<br>Giải pháp xanh cho nông nghiệp</h1>
+      <h1 class="hero-title">Sản phẩm từ xơ dừa <br>Công nghệ xanh trong nông nghiệp</h1>
       <p class="hero-desc">Kết nối trực tiếp doanh nghiệp địa phương.<br><strong>Minh bạch · Thân thiện môi trường · Dễ đặt hàng.</strong></p>
       <div class="hero-cta">
-        <button class="btn btn-primary btn-lg" onclick="nav('products')">🛍️ Xem sản phẩm</button>
-        <button class="hero-ghost-btn">🌿 Tìm hiểu lợi ích</button>
+        <button class="btn btn-primary btn-lg" onclick="nav('products')">Xem sản phẩm</button>
+        <button class="hero-ghost-btn">Tìm hiểu lợi ích</button>
       </div>
     </div>
     <div class="hero-badge">
@@ -453,18 +623,21 @@ function renderHome() {
   </section>
 
   <!-- KPI STRIP -->
-  <div class="kpi-strip">
-    ${kpis
-      .map(
-        (k, i) => `
-      <div class="kpi-item" style="animation:fadeInUp .6s ease ${i * 0.1}s both">
-        <span class="kpi-icon">${k.icon}</span>
-        <span class="kpi-value">${k.val}</span>
-        <span class="kpi-label">${k.lbl}</span>
-      </div>`,
-      )
-      .join("")}
-  </div>
+   <div class="kpi-strip">
+      ${kpis
+        .map(
+          (k, i) => `
+          <div class="kpi-item">
+            <span class="kpi-icon">
+              ${k.icon}
+            </span>
+            <span class="kpi-value">${k.val}</span>
+            <span class="kpi-label">${k.lbl}</span>
+          </div>
+          `,
+        )
+        .join("")}
+   </div>
 
   <!-- FEATURED PRODUCTS -->
   <div class="section-wrap">
@@ -532,7 +705,7 @@ function renderHome() {
   <div class="cta-banner-wrap">
     <div class="cta-banner">
       <div>
-        <span class="tag" style="background:rgba(255,255,255,.15);color:var(--green-pale);margin-bottom:14px;display:inline-flex">🎁 Ưu đãi đặc biệt</span>
+        <span class="tag" style="background:rgba(255,255,255,.15);color:var(--green-pale);margin-bottom:14px;display:inline-flex">Ưu đãi đặc biệt</span>
         <h2 class="cta-banner-title">Đặt hàng lần đầu — Giảm 10%</h2>
         <p class="cta-banner-desc">Đăng ký tài khoản và nhận ngay mã giảm giá 10% cho đơn hàng đầu tiên. Áp dụng cho tất cả sản phẩm.</p>
       </div>
@@ -851,7 +1024,13 @@ function renderNews() {
         <span>👁️ ${n.views?.toLocaleString()} lượt xem</span>
         <span>⏱️ ${n.readTime} phút đọc</span>
       </div>
-      <div class="news-detail-img">${ph("100%", 320, "Ảnh bài viết — 840×340px")}</div>
+      <div class="news-detail-img">
+          ${
+            n.img
+              ? `<img src="${n.img}" style="width:100%;height:320px;object-fit:cover;border-radius:12px;">`
+              : ph("100%", 320, "Ảnh bài viết — 840×340px")
+          }
+      </div>
       <div class="news-detail-body">
         <p>${n.desc}</p>
         <p>Trong những năm gần đây, xu hướng sử dụng các sản phẩm từ dừa trong nông nghiệp ngày càng được quan tâm rộng rãi. Xơ dừa, gáo dừa và các phế phẩm dừa đang dần thay thế các loại hóa chất truyền thống, mang lại lợi ích thiết thực cho người nông dân lẫn môi trường xung quanh.</p>
@@ -879,7 +1058,14 @@ function renderNews() {
     </div>
     <!-- Featured article -->
     <div style="display:grid;grid-template-columns:1fr 1fr;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);margin-bottom:44px;cursor:pointer;min-height:340px" onclick="viewNews(${NEWS[0].id})">
-      <div style="overflow:hidden">${ph("100%", 340, "Ảnh nổi bật — 700×420px")}</div>
+      <div style="overflow:hidden">
+        ${
+          NEWS[0].img
+            ? `<img src="${NEWS[0].img}" 
+                style="width:100%;height:420px;object-fit:cover;">`
+            : ph("100%", 420, "Ảnh nổi bật — 700×420px")
+        }
+      </div>
       <div style="padding:40px;display:flex;flex-direction:column;justify-content:center">
         <span class="tag tag-green" style="margin-bottom:14px;display:inline-flex">⭐ Nổi bật · ${NEWS[0].tag}</span>
         <h2 style="font-size:clamp(17px,2.2vw,24px);color:var(--green-deep);margin-bottom:12px;line-height:1.4">${NEWS[0].title}</h2>
