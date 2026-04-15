@@ -1,0 +1,62 @@
+/* ============================================================
+   COCOGREEN – DESIGN TOKENS
+   Tất cả màu sắc, font, spacing dùng chung toàn dự án
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --green-deep:   #1B4332;
+  --green-mid:    #2D6A4F;
+  --green-light:  #52B788;
+  --green-pale:   #B7E4C7;
+  --cream:        #F8F4EE;
+  --cream-dark:   #EDE8DF;
+  --brown:        #8B5E3C;
+  --gold:         #C9A84C;
+  --gold-dark:    #B8963E;
+
+  /* ── Semantic Colors ── */
+  --text:         #2C2C2C;
+  --text-muted:   #7A7A7A;
+  --white:        #FFFFFF;
+  --danger:       #E63946;
+  --warning:      #F59E0B;
+  --success:      #22C55E;
+  --info:         #3B82F6;
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Be Vietnam Pro', sans-serif;
+
+  /* ── Shadows ── */
+  --shadow:    0 4px 24px rgba(27, 67, 50, 0.10);
+  --shadow-lg: 0 8px 40px rgba(27, 67, 50, 0.15);
+  --shadow-sm: 0 2px 12px rgba(27, 67, 50, 0.07);
+
+  /* ── Border Radius ── */
+  --radius-sm: 6px;
+  --radius:    12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* ── Spacing Scale ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── Layout ── */
+  --max-width: 1280px;
+  --header-height: 72px;
+
+  /* ── Transitions ── */
+  --transition: all 0.25s ease;
+  --transition-slow: all 0.4s ease;
+}

@@ -1,0 +1,27 @@
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--green-light);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.icon { font-size: 28px; }
+
+.change {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.up   { background: #e8f5e9; color: var(--green-mid); }
+.down { background: #fce4ec; color: #c62828; }
