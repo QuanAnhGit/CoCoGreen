@@ -1,0 +1,76 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Item list */
+.items { display: flex; flex-direction: column; gap: 14px; }
+.item  {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 16px;
+}
+
+.itemImg { border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+
+.itemInfo  { flex: 1; min-width: 0; }
+.itemCategory { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--green-light); margin-bottom: 4px; }
+.itemName  { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+
+.itemQty {
+  display: flex; align-items: center;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: var(--radius-sm); overflow: hidden;
+}
+.qtyBtn {
+  width: 34px; height: 36px;
+  background: var(--cream-dark); border: none;
+  font-size: 18px; font-weight: 700;
+  color: var(--green-deep); cursor: pointer;
+  transition: var(--transition); font-family: var(--font-body);
+}
+.qtyBtn:hover { background: var(--green-pale); }
+.qtyVal { width: 44px; text-align: center; font-weight: 700; font-size: 14px; font-family: var(--font-body); }
+
+.itemPrice {
+  text-align: right; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.itemPrice strong { color: var(--green-deep); font-size: 15px; }
+
+.removeBtn {
+  background: none; border: none; font-size: 18px;
+  cursor: pointer; padding: 6px; border-radius: 6px;
+  transition: var(--transition); color: var(--text-muted);
+}
+.removeBtn:hover { background: #fce4ec; color: #c62828; }
+
+/* Summary */
+.summary {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow);
+  position: sticky; top: calc(var(--header-height) + 16px);
+}
+.summaryTitle { color: var(--green-deep); margin-bottom: 20px; font-size: 18px; }
+
+.summaryRow {
+  display: flex; justify-content: space-between;
+  font-size: 14px; margin-bottom: 10px; color: var(--text);
+  font-family: var(--font-body);
+}
+
+.summaryTotal {
+  display: flex; justify-content: space-between;
+  font-weight: 700; font-size: 18px; color: var(--green-deep);
+  border-top: 1.5px solid var(--cream-dark);
+  padding-top: 14px; margin: 10px 0 18px;
+  font-family: var(--font-display);
+}
+
+.promoRow {
+  display: flex; gap: 8px; margin-bottom: 14px;
+}
