@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CCG.API/CCG.API.csproj" />
+  <Project Path="CCG.Core/CCG.Core.csproj" />
+</Solution>
