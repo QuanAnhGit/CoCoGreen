@@ -3,6 +3,10 @@
 // ============================================================
 
 import { ImgPlaceholder } from '../common/ImgPlaceholder';
+import logoTxt from '../../data/logo-txt.png';
+import linkedinIcon from '../../data/linkedin.png';
+import youtubeIcon from '../../data/youtube.png';
+import instagramIcon from '../../data/instagram.png';
 import styles from './Footer.module.css';
 
 const FOOTER_LINKS = [
@@ -26,21 +30,22 @@ export function Footer({ onNavigate }) {
       <div className={styles.inner}>
         {/* Brand column */}
         <div className={styles.brand}>
-          <div className={styles.logo}>
-            <ImgPlaceholder width={140} height={50} label="Logo trắng" />
-          </div>
+          <div className={styles.logo} style={{ backgroundImage: `url(${logoTxt})` }} />
           <p className={styles.tagline}>
             Kết nối trực tiếp doanh nghiệp địa phương miền Tây. Sản phẩm xanh
             từ dừa — Bền vững cho nông nghiệp Việt.
           </p>
           <div className={styles.social}>
-            {['📘', '📸', '▶️'].map((ic, i) => (
-              <button key={i} className={styles.socialBtn}>{ic}</button>
-            ))}
+            <button className={styles.socialBtn} title="LinkedIn" style={{ backgroundImage: `url(${linkedinIcon})` }}>
+            </button>
+            <button className={styles.socialBtn} title="YouTube" style={{ backgroundImage: `url(${youtubeIcon})` }} onClick={() => window.open('https://www.youtube.com/@%E3%81%8D%E3%82%87%E3%82%8B-KYoru', '_blank')}>
+            </button>
+            <button className={styles.socialBtn} title="Instagram" style={{ backgroundImage: `url(${instagramIcon})` }}>
+            </button>
           </div>
         </div>
 
-        {/* Links columns */}
+        {/* Links co  lumns */}
         {FOOTER_LINKS.map((col) => (
           <div key={col.title}>
             <h4 className={styles.colTitle}>{col.title}</h4>

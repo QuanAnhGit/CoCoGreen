@@ -1,0 +1,191 @@
+.chatWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.chatWrapper.open {
+  pointer-events: auto;
+}
+
+.chatWrapper.open .chatOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chatWrapper.closed .chatOverlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chatOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.chatbotContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 75vh;
+  width: 40vw;
+  max-width: 560px;
+  min-width: 320px;
+  background-color: var(--white);
+  border-radius: 0 0 0 18px;
+  box-shadow: 0 0 20px var(--green-light);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+
+.chatWrapper.open .chatbotContainer {
+  transform: translateX(0);
+}
+
+.chatHeader {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--green-deep);
+}
+
+.chatHeader h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.chatHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chatResetBtn,
+.chatCloseBtn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 0;
+  transition: var(--transition);
+}
+
+.chatResetBtn {
+  background: var(--green-mid);
+  color: white;
+}
+.chatResetBtn:hover {
+  background: var(--green-deep);
+}
+
+.chatCloseBtn {
+  background: var(--cream);
+}
+
+.chatCloseBtn:hover {
+  background: var(--cream-dark);
+}
+
+.chatBody {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatStatus {
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.chatInput {
+  display: flex;
+  background-color: var(--cream);
+  gap: 10px;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  align-items: flex-end;
+}
+
+.chatTextarea {
+  flex: 1;
+  min-height: 44px;
+  max-height: 5.4rem;
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  overflow-y: hidden;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.chatButtonGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.retryBtn,
+.sendBtn {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.retryBtn {
+  background: var(--cream);
+}
+
+.retryBtn:hover:not(:disabled) {
+  background: var(--cream-dark);
+}
+
+.retryBtn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.sendBtn {
+  background: var(--green-deep);
+  color: var(--white);
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: var(--green-mid);
+}
+
+.sendBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

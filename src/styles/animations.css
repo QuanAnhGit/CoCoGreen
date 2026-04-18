@@ -56,3 +56,183 @@
   animation: shimmer 1.5s infinite;
   border-radius: var(--radius-sm);
 }
+
+/* ── Scroll Reveal Animations ── */
+@keyframes scrollRevealIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollRevealOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Fade In */
+@keyframes scrollFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scrollFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Float In Left */
+@keyframes scrollFloatInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollFloatOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+/* Float In Right */
+@keyframes scrollFloatInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollFloatOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+/* Reveal Classes (Fade In + Slide Up) */
+.scroll-reveal {
+  animation: scrollRevealIn 0.8s ease both;
+}
+
+.scroll-hidden {
+  animation: scrollRevealOut 0.8s ease both;
+}
+
+/* Fade Classes */
+.scroll-fade-reveal {
+  animation: scrollFadeIn 0.8s ease both;
+}
+
+.scroll-fade-hidden {
+  animation: scrollFadeOut 0.8s ease both;
+}
+
+/* Float Left Classes */
+.scroll-float-left-reveal {
+  animation: scrollFloatInLeft 0.8s ease both;
+}
+
+.scroll-float-left-hidden {
+  animation: scrollFloatOutLeft 0.8s ease both;
+}
+
+/* Float Right Classes */
+.scroll-float-right-reveal {
+  animation: scrollFloatInRight 0.8s ease both;
+}
+
+.scroll-float-right-hidden {
+  animation: scrollFloatOutRight 0.8s ease both;
+}
+
+/* Fade Rotate In Left */
+@keyframes scrollFadeRotateInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) rotateZ(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+@keyframes scrollFadeRotateOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px) rotateZ(-15deg);
+  }
+}
+
+/* Fade Rotate In Right */
+@keyframes scrollFadeRotateInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px) rotateZ(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+@keyframes scrollFadeRotateOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0) rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px) rotateZ(15deg);
+  }
+}
+
+/* Fade Rotate In Left Classes */
+.scroll-fade-rotate-left-reveal {
+  animation: scrollFadeRotateInLeft 0.8s ease both;
+}
+
+.scroll-fade-rotate-left-hidden {
+  animation: scrollFadeRotateOutLeft 0.8s ease both;
+}
+
+/* Fade Rotate In Right Classes */
+.scroll-fade-rotate-right-reveal {
+  animation: scrollFadeRotateInRight 0.8s ease both;
+}
+
+.scroll-fade-rotate-right-hidden {
+  animation: scrollFadeRotateOutRight 0.8s ease both;
+}

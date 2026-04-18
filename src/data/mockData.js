@@ -233,16 +233,16 @@ export const PARTNERS = [
 ];
 
 export const KPI_STATS = [
-  { icon: '🏭', value: '120+',  label: 'Doanh nghiệp liên kết' },
-  { icon: '📦', value: '350+',  label: 'Sản phẩm niêm yết' },
-  { icon: '🛍️', value: '8,500', label: 'Đơn hàng hoàn thành' },
-  { icon: '⭐', value: '4.8/5', label: 'Đánh giá trung bình' },
-  { icon: '⏰', value: '8–17h', label: 'Giờ hoạt động' },
+  { value: '120+',  label: 'Doanh nghiệp liên kết' },
+  { value: '350+',  label: 'Sản phẩm niêm yết' },
+  { value: '8,500', label: 'Đơn hàng hoàn thành' },
+  { value: '4.8/5', label: 'Đánh giá trung bình' },
+  { value: '8–17h', label: 'Giờ hoạt động' },
 ];
 
 export const DASHBOARD_STATS = [
-  { icon: '📦', label: 'Tổng đơn hàng',     value: '1,247',   change: '+12%',  up: true  },
-  { icon: '💰', label: 'Tổng doanh thu',     value: '48.3M đ', change: '+8.4%', up: true  },
-  { icon: '📋', label: 'Sản phẩm đang bán',  value: '32',      change: '+3',    up: true  },
-  { icon: '⚠️', label: 'Tồn kho thấp',      value: '5',       change: '-2',    up: false },
+  { label: 'Tổng đơn hàng',     value: '1,247',   change: '+12%',  up: true  },
+  { label: 'Tổng doanh thu',     value: '48.3M đ', change: '+8.4%', up: true  },
+  { label: 'Sản phẩm đang bán',  value: '32',      change: '+3',    up: true  },
+  { label: 'Tồn kho thấp',      value: '5',       change: '-2',    up: false },
 ];

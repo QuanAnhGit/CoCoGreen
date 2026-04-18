@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--cream);
-  border-bottom: 1px solid var(--cream-dark);
+  background: var(--white) !important;
+  border-bottom: 3px solid var(--green-deep);
   transition: var(--transition);
 }
 
@@ -25,6 +25,7 @@
 }
 
 .inner {
+  background-color: transparent;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-6);
@@ -34,7 +35,16 @@
   height: var(--header-height);
 }
 
-.logo { cursor: pointer; flex-shrink: 0; border-radius: var(--radius-sm); overflow: hidden; }
+.logo {
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  height: 66px;
+  width: 130px;
+  background-size: cover;
+  background-position: center;
+}
 
 /* Nav */
 .nav {
@@ -58,11 +68,25 @@
   transition: var(--transition);
   white-space: nowrap;
 }
-.navLink:hover { color: var(--green-deep); border-bottom-color: var(--green-pale); }
-.navLink.active { color: var(--green-deep); font-weight: 700; border-bottom-color: var(--green-light); }
+
+.navLink:hover {
+  color: var(--green-deep);
+  border-bottom-color: var(--green-pale);
+}
+
+.navLink.active {
+  color: var(--green-deep);
+  font-weight: 700;
+  border-bottom-color: var(--green-light);
+}
 
 /* Actions */
-.actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
 
 .loginBtn {
   background: transparent;
@@ -76,7 +100,11 @@
   cursor: pointer;
   transition: var(--transition);
 }
-.loginBtn:hover { background: var(--green-deep); color: var(--white); }
+
+.loginBtn:hover {
+  background: var(--green-deep);
+  color: var(--white);
+}
 
 .cartBtn {
   background: none;
@@ -103,4 +131,32 @@
   justify-content: center;
   font-weight: 700;
   font-family: var(--font-body);
+}
+
+.chatBtn {
+  position: fixed;
+  top: calc(var(--header-height) + 60px);
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--cream);
+  background-position: 50% 3px;
+  background-size: 100%;
+  color: var(--green-deep);
+  border: 3px solid var(--green-deep);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chatBtn:hover {
+  background-color: var(--green-light);
+  transform: scale(1.05) translate(1px, -1px);
 }

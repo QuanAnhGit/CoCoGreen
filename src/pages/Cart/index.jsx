@@ -14,7 +14,7 @@ export function Cart({ cartItems, onRemove, onUpdateQty, totalPrice, onNavigate 
           <div className="empty-state-icon">🛒</div>
           <h2 className="empty-state-title">Giỏ hàng trống</h2>
           <p className="empty-state-desc">Hãy thêm sản phẩm vào giỏ để tiến hành đặt hàng.</p>
-          <button className="btn btn-primary" onClick={() => onNavigate('products')}>
+          <button className={styles.seeProductsBtn} onClick={() => onNavigate('products')}>
             Xem sản phẩm ngay →
           </button>
         </div>
@@ -80,10 +80,10 @@ export function Cart({ cartItems, onRemove, onUpdateQty, totalPrice, onNavigate 
           {/* Promo code */}
           <div className={styles.promoRow}>
             <input className="form-control" placeholder="Nhập mã giảm giá..." style={{ fontSize: 13 }} />
-            <button className="btn btn-outline btn-sm" style={{ flexShrink: 0 }}>Áp dụng</button>
+            <button className={styles.applyPromoBtn} style={{ flexShrink: 0, fontSize: 12, fontWeight: 'bold' }}>Áp dụng</button>
           </div>
 
-          <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', fontSize: 15, marginTop: 4 }}>
+          <button className={styles.confirmOrderBtn} style={{ width: '100%', justifyContent: 'center', fontSize: 15, marginTop: 4 }}>
             Tiến hành đặt hàng →
           </button>
           <button

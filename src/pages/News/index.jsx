@@ -15,10 +15,10 @@ export function News() {
   if (selected) {
     return (
       <div className={styles.detailWrapper}>
-        <button className="btn btn-outline btn-sm" style={{ marginBottom: 24 }} onClick={() => setSelected(null)}>
+        <button className={styles.backBtn} style={{ marginBottom: 24 }} onClick={() => setSelected(null)}>
           ← Quay lại danh sách
         </button>
-        <span className="tag tag-green" style={{ marginBottom: 14, display: 'inline-flex' }}>
+        <span className="tag tag-green" style={{ margin: '0 0 14px 10px', display: 'inline-flex' }}>
           {selected.tag}
         </span>
         <h1 className={styles.detailTitle}>{selected.title}</h1>
@@ -86,7 +86,7 @@ export function News() {
             <span>👁️ {NEWS[0].views?.toLocaleString()}</span>
             <span>⏱️ {NEWS[0].readTime} phút</span>
           </div>
-          <button className="btn btn-primary btn-sm" style={{ marginTop: 20 }}>
+          <button className={styles.readArticleBtn} style={{ marginTop: 20 }}>
             Đọc bài viết →
           </button>
         </div>

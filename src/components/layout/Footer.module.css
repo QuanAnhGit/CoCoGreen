@@ -14,8 +14,16 @@
 }
 
 /* Brand column */
-.brand {}
-.logo  { border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; filter: brightness(1.3); }
+/* .brand {} */
+.logo {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  filter: brightness(1.5);
+  height: 50px;
+  width: 170px;
+  background-position: center;
+  background-size: cover;
+}
 
 .tagline {
   font-size: 14px;
@@ -24,7 +32,11 @@
   margin-bottom: 16px;
 }
 
-.social { display: flex; gap: 10px; }
+.social {
+  display: flex;
+  gap: 10px;
+}
+
 .socialBtn {
   width: 36px;
   height: 36px;
@@ -34,11 +46,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center;
+  background-size: cover;
   cursor: pointer;
   font-size: 16px;
   transition: var(--transition);
 }
-.socialBtn:hover { background: rgba(255, 255, 255, 0.22); }
+
+.socialBtn:hover {
+  filter: brightness(0.7);
+}
 
 /* Links */
 .colTitle {
@@ -49,7 +66,10 @@
   margin-bottom: 14px;
 }
 
-.linkList { list-style: none; }
+.linkList {
+  list-style: none;
+}
+
 .linkItem {
   font-size: 13px;
   opacity: 0.75;
@@ -58,7 +78,11 @@
   transition: var(--transition);
   line-height: 1.5;
 }
-.linkItem:hover { opacity: 1; color: var(--green-pale); }
+
+.linkItem:hover {
+  opacity: 1;
+  color: var(--green-pale);
+}
 
 /* Bottom */
 .bottom {

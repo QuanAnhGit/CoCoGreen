@@ -4,29 +4,27 @@
 
 import { useState, useEffect } from 'react';
 import { ImgPlaceholder } from '../common/ImgPlaceholder';
+import logo from '../../data/logo.jpg';
+import chatIcon from '../../data/chat.png';
 import styles from './Header.module.css';
 
 const NAV_LINKS = [
-  { label: 'Trang chủ',    page: 'home' },
-  { label: 'Sản phẩm',     page: 'products' },
-  { label: 'Tin tức',      page: 'news' },
-  { label: 'Yêu thích',    page: 'favorites' },
-  { label: 'DN Dashboard', page: 'dashboard' },
-  { label: 'Đơn hàng',     page: 'orders' },
+  { label: 'Trang chủ', page: 'home' },
+  { label: 'Sản phẩm', page: 'products' },
+  { label: 'Tin tức', page: 'news' },
+  { label: 'Yêu thích', page: 'favorites' },
+  // { label: 'DN Dashboard', page: 'dashboard' },
+  // { label: 'Đơn hàng', page: 'orders' },
 ];
 
-export function Header({ currentPage, onNavigate, cartCount = 0 }) {
-  const [scrolled,   setScrolled]   = useState(false);
+export function Header({ currentPage, onNavigate, cartCount = 0, onChatToggle, chatOpen }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', fn);
-    return () => window.removeEventListener('scroll', fn);
   }, []);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={styles.header}>
       {/* Top announcement bar */}
       <div className={styles.topBar}>
         🌴 Sản phẩm xanh từ miền Tây — Minh bạch · Thân thiện môi trường · Dễ đặt hàng
@@ -34,8 +32,7 @@ export function Header({ currentPage, onNavigate, cartCount = 0 }) {
 
       <div className={styles.inner}>
         {/* Logo */}
-        <div className={styles.logo} onClick={() => onNavigate('home')}>
-          <ImgPlaceholder width={130} height={46} label="Logo CoCoGreen" />
+        <div className={styles.logo} style={{ backgroundImage: `url(${logo})` }} onClick={() => onNavigate('home')}>
         </div>
 
         {/* Navigation */}
@@ -64,6 +61,10 @@ export function Header({ currentPage, onNavigate, cartCount = 0 }) {
           </button>
         </div>
       </div>
+
+      {/* Floating Chat Button */}
+      <button className={styles.chatBtn} onClick={() => onChatToggle(true)} style={{ backgroundImage: `url(${chatIcon})` }}>
+      </button>
     </header>
   );
 }

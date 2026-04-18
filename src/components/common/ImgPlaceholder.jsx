@@ -10,7 +10,7 @@ import styles from './ImgPlaceholder.module.css';
  * @param {number}        height  – px
  * @param {string}        label   – chú thích kích thước
  */
-export function ImgPlaceholder({ width = '100%', height = 200, label = 'Ảnh sản phẩm' }) {
+export function ImgPlaceholder({ width = '100%', height = '100%', label = 'Ảnh sản phẩm' }) {
   return (
     <div
       className={styles.placeholder}
