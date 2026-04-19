@@ -6,7 +6,11 @@ import { ImgPlaceholder } from '../../components/common/ImgPlaceholder';
 import { formatCurrency } from '../../utils/format';
 import styles from './Cart.module.css';
 
-export function Cart({ cartItems, onRemove, onUpdateQty, totalPrice, onNavigate }) {
+export function Cart({ cartItems, onRemove, onUpdateQty, totalPrice, onNavigate, onClearCart }) {
+  const handleConfirmOrder = () => {
+    onClearCart?.();
+    onNavigate('orderSuccess');
+  };
   if (!cartItems.length) {
     return (
       <div className="page-wrapper">
@@ -83,7 +87,7 @@ export function Cart({ cartItems, onRemove, onUpdateQty, totalPrice, onNavigate 
             <button className={styles.applyPromoBtn} style={{ flexShrink: 0, fontSize: 12, fontWeight: 'bold' }}>Áp dụng</button>
           </div>
 
-          <button className={styles.confirmOrderBtn} style={{ width: '100%', justifyContent: 'center', fontSize: 15, marginTop: 4 }}>
+          <button className={styles.confirmOrderBtn} style={{ width: '100%', justifyContent: 'center', fontSize: 15, marginTop: 4 }} onClick={handleConfirmOrder}>
             Tiến hành đặt hàng →
           </button>
           <button

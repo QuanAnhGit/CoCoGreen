@@ -1,5 +1,6 @@
 .header {
   position: sticky;
+  width: 100vw;
   top: 0;
   z-index: 100;
   background: var(--white) !important;
@@ -26,13 +27,27 @@
 
 .inner {
   background-color: transparent;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
+  width: 100%;
+  padding: 0 139px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: var(--header-height);
+}
+
+.leftGroup {
   display: flex;
   align-items: center;
   gap: 20px;
-  height: var(--header-height);
+  flex: 0 1 auto;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -50,9 +65,8 @@
 .nav {
   display: flex;
   gap: 4px;
-  flex: 1;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navLink {
@@ -80,14 +94,6 @@
   border-bottom-color: var(--green-light);
 }
 
-/* Actions */
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
 .loginBtn {
   background: transparent;
   color: var(--green-deep);
@@ -104,6 +110,36 @@
 .loginBtn:hover {
   background: var(--green-deep);
   color: var(--white);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 250px;
+}
+
+.userName {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 1;
+  /* text-align: end; */
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  border: 2px solid var(--green-light);
+  flex-shrink: 0;
 }
 
 .cartBtn {

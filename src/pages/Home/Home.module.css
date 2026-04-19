@@ -8,11 +8,15 @@ body {
 .hero {
   position: relative;
   min-height: 580px;
+  height: calc(100vh - 200px);
   overflow: hidden;
 }
 
 .heroBg {
+  height: 100%;
   position: absolute;
+  background-position: center;
+  background-size: cover;
   inset: 0;
 }
 

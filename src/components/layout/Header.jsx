@@ -13,8 +13,8 @@ const NAV_LINKS = [
   { label: 'Sản phẩm', page: 'products' },
   { label: 'Tin tức', page: 'news' },
   { label: 'Yêu thích', page: 'favorites' },
-  // { label: 'DN Dashboard', page: 'dashboard' },
-  // { label: 'Đơn hàng', page: 'orders' },
+  // { label: 'DN Dashboard', page: 'dashboard' }, // path: /dashboard
+  // { label: 'Đơn hàng', page: 'orders' }, // path: /orders
 ];
 
 export function Header({ currentPage, onNavigate, cartCount = 0, onChatToggle, chatOpen }) {
@@ -31,28 +31,35 @@ export function Header({ currentPage, onNavigate, cartCount = 0, onChatToggle, c
       </div>
 
       <div className={styles.inner}>
-        {/* Logo */}
-        <div className={styles.logo} style={{ backgroundImage: `url(${logo})` }} onClick={() => onNavigate('home')}>
+        {/* Left Group: Logo + Nav */}
+        <div className={styles.leftGroup}>
+          {/* Logo */}
+          <div className={styles.logo} style={{ backgroundImage: `url(${logo})` }} onClick={() => onNavigate('home')}>
+          </div>
+
+          {/* Navigation */}
+          <nav className={styles.nav}>
+            {NAV_LINKS.map((link) => (
+              <button
+                key={link.page}
+                className={`${styles.navLink} ${currentPage === link.page ? styles.active : ''}`}
+                onClick={() => onNavigate(link.page)}
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
         </div>
 
-        {/* Navigation */}
-        <nav className={styles.nav}>
-          {NAV_LINKS.map((link) => (
-            <button
-              key={link.page}
-              className={`${styles.navLink} ${currentPage === link.page ? styles.active : ''}`}
-              onClick={() => onNavigate(link.page)}
-            >
-              {link.label}
-            </button>
-          ))}
-        </nav>
-
-        {/* Actions */}
-        <div className={styles.actions}>
-          <button className={styles.loginBtn} onClick={() => onNavigate('login')}>
+        {/* Right Group: Actions */}
+        <div className={styles.rightGroup}>
+          {/* <button className={styles.loginBtn} onClick={() => onNavigate('login')}>
             Đăng nhập
-          </button>
+          </button> */}
+          <div className={styles.userInfo}>
+            <span className={styles.userName}>Kousei Yozora</span>
+            <div className={styles.userAvatar}></div>
+          </div>
           <button className={styles.cartBtn} onClick={() => onNavigate('cart')}>
             🛒
             {cartCount > 0 && (

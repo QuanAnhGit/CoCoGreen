@@ -29,8 +29,7 @@ export function Home({ onNavigate, onAddToCart }) {
     <div>
       {/* ── HERO BANNER ── */}
       <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <img src={landing} alt="Hero Banner" style={{ width: '100%', height: '580px', objectFit: 'cover' }} />
+        <div className={styles.heroBg} style={{ backgroundImage: `url(${landing})` }}>
         </div>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>

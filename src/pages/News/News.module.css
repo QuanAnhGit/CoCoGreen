@@ -166,6 +166,13 @@
   height: 340px;
 }
 
+.detailDesc {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 24px !important;
+}
+
 .detailBody p {
   font-size: 15px;
   line-height: 1.9;

@@ -7,6 +7,11 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -27,6 +32,16 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -44,10 +59,15 @@
 
 /* ── Utility Classes ── */
 .animate-fadeInUp   { animation: fadeInUp 0.7s ease both; }
+.animate-fadeInDown { animation: fadeInDown 0.7s ease both; }
 .animate-fadeIn     { animation: fadeIn   0.5s ease both; }
 .animate-scaleIn    { animation: scaleIn  0.4s ease both; }
 .animate-slideLeft  { animation: slideInLeft  0.5s ease both; }
 .animate-slideRight { animation: slideInRight 0.5s ease both; }
+.animate-slideUp    { animation: slideInUp    0.5s ease both; }
+.animate-slideDown  { animation: slideInDown  0.5s ease both; }
+.animate-marquee    { animation: marquee 20s linear infinite; }
+.animate-pulse      { animation: pulse 2s ease-in-out infinite; }
 
 /* Skeleton loading */
 .skeleton {

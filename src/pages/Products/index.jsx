@@ -48,11 +48,10 @@ export function Products({ onNavigate, onAddToCart }) {
         <div className={styles.controls}>
           {/* Search */}
           <div className={styles.searchWrap}>
-            <span className={styles.searchIcon}>🔍</span>
             <input
-              className="form-control"
+              className='form-control'
               placeholder="Tìm sản phẩm, doanh nghiệp..."
-              style={{ paddingLeft: 36, width: 240 }}
+              style={{ width: 300 }}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
