@@ -34,7 +34,9 @@ export function Dashboard({ onNavigate }) {
             HTX Dừa Xanh Trà Vinh · Cập nhật lúc 14:32 ngày 24/02/2026
           </p>
         </div>
-        <button className="btn btn-primary">+ Thêm sản phẩm</button>
+        <button className={styles.addBtn} onClick={() => onNavigate('add-product')}>
+          + Thêm sản phẩm
+        </button>
       </div>
 
       {/* ── KPI Row ── */}

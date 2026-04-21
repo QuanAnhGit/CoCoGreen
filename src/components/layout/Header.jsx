@@ -13,8 +13,8 @@ const NAV_LINKS = [
   { label: 'Sản phẩm', page: 'products' },
   { label: 'Tin tức', page: 'news' },
   { label: 'Yêu thích', page: 'favorites' },
-  // { label: 'DN Dashboard', page: 'dashboard' }, // path: /dashboard
-  // { label: 'Đơn hàng', page: 'orders' }, // path: /orders
+  // { label: 'Dashboard', page: 'dashboard' }, // path: /dashboard
+  // { label: 'Trung tâm Đơn hàng', page: 'orders' }, // path: /orders
 ];
 
 export function Header({ currentPage, onNavigate, cartCount = 0, onChatToggle, chatOpen }) {
